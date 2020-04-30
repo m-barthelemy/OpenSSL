@@ -17,6 +17,7 @@
 #ifndef OpenSSLHelper_h
 #define OpenSSLHelper_h
 
+#include <openssl/cms.h>
 #include <openssl/conf.h>
 #include <openssl/evp.h>
 #include <openssl/err.h>
@@ -26,9 +27,16 @@
 #include <openssl/md5.h>
 #include <openssl/sha.h>
 #include <openssl/hmac.h>
+#include <openssl/ocsp.h>
 #include <openssl/rand.h>
+#include <openssl/ripemd.h>
+#include <openssl/rsa.h>
+#include <openssl/pkcs7.h>
+#include <openssl/pkcs7err.h>
 #include <openssl/pkcs12.h>
 #include <openssl/x509v3.h>
+#include <openssl/stack.h>
+#include <openssl/safestack.h>
 
 // This is a wrapper function to wrap the call to SSL_CTX_set_alpn_select_cb() which is
 // only available from OpenSSL v1.0.2. Calling this function with older version will do
